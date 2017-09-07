@@ -10,7 +10,7 @@ const PostsRoute = Route.extend({
   store: service(),
 
   model(params) {
-    return get(this, 'store').findRecord('post', params.id);
+    return get(this, 'store').peekAll('post').find(p => get(p, 'slug') === params.slug);
   }
 });
 

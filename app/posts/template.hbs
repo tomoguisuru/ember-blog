@@ -5,7 +5,7 @@
                    lines=2
       }}
         {{#list.content}}
-          {{#link-to 'posts.details' post classNames="post-item__title mdl-typography--headline"}}
+          {{#link-to 'posts.details' post.slug classNames="post-item__title mdl-typography--headline"}}
             {{post.title}}
           {{/link-to}}
 

@@ -29,7 +29,7 @@ const PostModel = Model.extend({
     const title = get(this, 'title');
 
     const replaceAll = (string, term, replacement) => {
-      return string.replace(new Regex(term, 'g'), replacement);
+      return string.replace(new RegExp(term, 'g'), replacement);
     };
 
     return replaceAll(title, /(\s+|_|\?|!|@|#|\$|%|\^|&|\*|\(|\))/, '-');
