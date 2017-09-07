@@ -1,10 +1,45 @@
 {{#if isEditing}}
-  {{input type="text" value=model.title}}
 
-  {{textarea value=model.content cols="80" rows="6"}}
+  {{post-details post=model}}
+
 {{else}}
   <h2>{{model.title}}</h2>
   <p>
     {{model.content}}
   </p>
 {{/if}}
+
+
+<div class="post-actions">
+  {{#if isEditing}}
+
+    {{#mdl-button isFab=true
+                  isColored=true
+                  useRipple=true
+                  onClick=(action "saveModel" model)
+    }}
+      {{mdl-icon type="save"}}
+    {{/mdl-button}}
+
+    {{#mdl-button isFab=true
+                  useRipple=true
+                  onClick=(action "cancel" model)
+    }}
+      {{mdl-icon type="clear"}}
+    {{/mdl-button}}
+
+    {{#mdl-button isFab=true
+                  useRipple=true
+                  onClick=(action "deleteModel" model)
+    }}
+      {{mdl-icon type="delete"}}
+    {{/mdl-button}}
+  {{else}}
+    {{#mdl-button isFab=true
+                  useRipple=true
+                  onClick=(action "editModel")
+    }}
+      {{mdl-icon type="mode_edit"}}
+    {{/mdl-button}}
+  {{/if}}
+</div>

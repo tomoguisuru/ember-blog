@@ -5,11 +5,15 @@
     {{layout.title title="El Guapo's Bestest Blog"}}
   {{/layout.header}}
 
-  <div id="menu-drawer" class="paper-drawer">
+  <div id="menu-drawer" class="paper-drawer mdl-color--grey-100"></div>
 
-  </div>
-
-  {{#layout.content}}
+  {{#layout.content classNames="application-wrapper"}}
     {{outlet}}
   {{/layout.content}}
 {{/mdl-layout}}
+
+<footer class="mdl-mini-footer">
+  <div class="mdl-mini-footer__left-section">
+    <div class="mdl-logo">El Guapo's Bestest Blog</div>
+  </div>
+</footer>

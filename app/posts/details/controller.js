@@ -16,6 +16,22 @@ const PostDetailsController = Controller.extend({
   isEditing: false,
 
   actions: {
+
+    cancel(model) {
+      model.rollbackAttributes();
+      set(this, 'isEditing', false);
+    },
+
+    deleteModel(model) {
+      model.destroyRecord().then(() => {
+        get(this, 'toast').success('Deleted');
+        set(this, 'isEditing', false);
+        this.transitionToRoute('posts');
+      }, reason => {
+        get(this, 'toast').error('Delete failed');
+      })
+    },
+
     editModel() {
       set(this, 'isEditing', true);
     },
@@ -30,11 +46,6 @@ const PostDetailsController = Controller.extend({
         toast.error('Save failed');
         debug(reason);
       });
-    },
-
-    cancel(model) {
-      model.rollbackAttributes();
-      set(this, 'isEditing', false);
     },
   }
 });

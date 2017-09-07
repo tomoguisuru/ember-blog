@@ -1,2 +1,32 @@
 @import "modules/-paper-drawer";
 @import "modules/-post-list";
+
+// TODO: move this to a module
+.application-wrapper {
+  min-height: 100vh;
+
+  .content-wrapper {
+    padding: 10px;
+  }
+}
+
+.post-actions {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  max-width: 56px;
+  z-index: 99;
+
+  .mdl-button {
+    margin-bottom: 5px;
+  }
+}
+
+.flex {
+  display: flex;
+
+  &--column {
+    flex-direction: column;
+  }
+}
+

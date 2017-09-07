@@ -21,7 +21,7 @@ $break-large: 800px;
   width: 400px;
   z-index: 999;
   content: '';
-  background-color: lightslategrey;
+  //background-color: lightslategrey;
   overflow-y: auto;
 
   @media screen and (max-width: $break-large) {
