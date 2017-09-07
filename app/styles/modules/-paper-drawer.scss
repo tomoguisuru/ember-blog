@@ -1,0 +1,35 @@
+$break-small: 400px;
+$break-large: 800px;
+
+
+.mdl-layout {
+  &__header, &__content {
+    @media screen and (min-width: $break-large) {
+      margin-left: $break-small;
+    }
+
+
+    transition: margin-left 0.5s
+  }
+}
+
+.paper-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 400px;
+  z-index: 999;
+  content: '';
+  background-color: lightslategrey;
+  overflow-y: auto;
+
+  @media screen and (max-width: $break-large) {
+    width: 0px;
+  }
+  //@media screen and (min-width: $break-large) {
+  //
+  //}
+
+  transition: width 0.5s
+}

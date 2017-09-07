@@ -1,0 +1,10 @@
+{{#if isEditing}}
+  {{input type="text" value=model.title}}
+
+  {{textarea value=model.content cols="80" rows="6"}}
+{{else}}
+  <h2>{{model.title}}</h2>
+  <p>
+    {{model.content}}
+  </p>
+{{/if}}
