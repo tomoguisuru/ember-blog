@@ -13,7 +13,7 @@ class MirageResponseController {
     this.modelName = pluralize(modelName);
   }
 
-  getRequest(schema, request) {
+  getRequest(schema) {
     return schema[this.modelName].all();
   }
 

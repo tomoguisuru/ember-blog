@@ -13,6 +13,12 @@ $break-large: 800px;
   }
 }
 
+.mdl-mini-footer {
+  @media screen and (min-width: $break-large) {
+    margin-left: $break-small;
+  }
+}
+
 .paper-drawer {
   position: fixed;
   top: 0;

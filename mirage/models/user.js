@@ -1,6 +1,5 @@
 import {
   Model,
-  belongsTo,
   hasMany
 } from 'ember-cli-mirage';
 

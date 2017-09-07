@@ -29,6 +29,7 @@ const PostDetailsController = Controller.extend({
         this.transitionToRoute('posts');
       }, reason => {
         get(this, 'toast').error('Delete failed');
+        debug(reason);
       })
     },
 
