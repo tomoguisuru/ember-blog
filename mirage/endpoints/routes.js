@@ -7,7 +7,7 @@ function MirageRoutes(endpoint) {
   this.get(`/${endpoint}/:id`, (schema, request) => controller.getByIdRequest(schema, request));
   this.post(`/${endpoint}`, (schema, request) => controller.postRequest(schema, request));
   this.del(`/${endpoint}/:id`, (schema, request) => controller.deleteRequest(schema, request));
-  this.put(`/${endpoint}/:id`, (schema, request) => controller.putRequest(schema, request));
+  this.patch(`/${endpoint}/:id`, (schema, request) => controller.patchRequest(schema, request));
 }
 
 export default MirageRoutes;

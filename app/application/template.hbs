@@ -5,7 +5,7 @@
     {{layout.title title="El Guapo's Bestest Blog"}}
   {{/layout.header}}
 
-  <div id="menu-drawer" class="paper-drawer mdl-color--grey-100"></div>
+  <div id="menu-drawer" class="paper-drawer mdl-color--grey-100 {{if drawer.isActive 'isActive'}}"></div>
 
   {{#layout.content classNames="application-wrapper"}}
     {{outlet}}
@@ -17,3 +17,5 @@
     <div class="mdl-logo">El Guapo's Bestest Blog</div>
   </div>
 </footer>
+
+<div class="overlay {{if drawer.isActive 'isActive'}}" {{action "closeDrawer"}}></div>

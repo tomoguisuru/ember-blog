@@ -10,6 +10,46 @@
   }
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+
+  &.isActive {
+    display: inherit;
+  }
+}
+
+.author-info {
+  &--avatar {
+    img {
+      height: 50px;
+      border-radius: 100%;
+      padding: 5px 10px;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+
+    .details {
+      &--title {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.75);
+      }
+
+      &--subtext {
+
+      }
+    }
+  }
+}
+
 .post-actions {
   position: absolute;
   top: 15px;
@@ -27,6 +67,10 @@
 
   &--column {
     flex-direction: column;
+  }
+
+  &--1 {
+    flex: 1;
   }
 }
 

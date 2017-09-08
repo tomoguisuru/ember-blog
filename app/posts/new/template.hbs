@@ -1,0 +1,20 @@
+{{post-details post=model}}
+
+<div class="post-actions">
+
+  {{#mdl-button isFab=true
+                isColored=true
+                useRipple=true
+                onClick=(action "saveModel" model)
+  }}
+    {{mdl-icon type="save"}}
+  {{/mdl-button}}
+
+  {{#mdl-button isFab=true
+                useRipple=true
+                onClick=(action "cancel")
+  }}
+    {{mdl-icon type="clear"}}
+  {{/mdl-button}}
+
+</div>

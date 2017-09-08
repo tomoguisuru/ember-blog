@@ -11,6 +11,12 @@ const PostsRoute = Route.extend({
 
   model() {
     return get(this, 'store').findAll('post');
+  },
+
+  actions: {
+    willTransition() {
+      this.controller.send('closeMenu');
+    }
   }
 });
 

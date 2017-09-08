@@ -4,6 +4,7 @@ import DS from 'ember-data';
 const {
   computed,
   get,
+  isEmpty,
 } = Ember;
 
 const {
@@ -27,6 +28,8 @@ const PostModel = Model.extend({
 
   slug: computed('title', function() {
     const title = get(this, 'title');
+
+    if (isEmpty(title)) { return; }
 
     const replaceAll = (string, term, replacement) => {
       return string.replace(new RegExp(term, 'g'), replacement);

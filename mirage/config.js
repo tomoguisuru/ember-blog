@@ -7,4 +7,8 @@ export default function() {
   MirageRoutes.apply(this, ['posts']);
   MirageRoutes.apply(this, ['users']);
   MirageRoutes.apply(this, ['comments']);
+
+  this.get('/users/me', schema => {
+    return schema.users.find(1);
+  });
 }

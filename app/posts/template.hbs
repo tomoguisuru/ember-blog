@@ -1,4 +1,21 @@
 {{#ember-wormhole to="menu-drawer"}}
+  <div class="drawer-controls">
+    {{#mdl-button onClick=(action "showMenu")}}
+      {{mdl-icon classNames="mdl-color-text--white" type="list"}}
+    {{/mdl-button}}
+  </div>
+
+  <div class="drawer-actions flex">
+    <span class="mdl-typography--display-3 flex--1">Posts</span>
+    {{#mdl-button isFab=true
+                  isColored=true
+                  useRipple=true
+                  onClick=(action "newPost")
+    }}
+      {{mdl-icon type="add"}}
+    {{/mdl-button}}
+  </div>
+
   {{#mdl-list classNames="post-list" as |list|}}
     {{#each model as |post|}}
       {{#list.item classNames="post-item"
@@ -6,13 +23,13 @@
       }}
         {{#list.content}}
           {{#link-to 'posts.details' post.slug classNames="post-item__title mdl-typography--headline"}}
-            {{post.title}}
+            {{trunc-string post.title 40}}
           {{/link-to}}
 
           {{#list.content type="text-body"
                           classNames="post-item__body"
           }}
-            {{post.content}}
+            {{trunc-string post.content 50}}
           {{/list.content}}
         {{/list.content}}
       {{/list.item}}

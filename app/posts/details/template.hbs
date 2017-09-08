@@ -4,6 +4,16 @@
 
 {{else}}
   <h2>{{model.title}}</h2>
+  <div class="author-info flex">
+    <div class="author-info--avatar">
+      <img src="{{model.user.avatar}}">
+    </div>
+
+    <div class="author-info__details">
+        <span class="details--title mdl-typography--headline">{{model.user.fullName}}</span>
+        <span class="details--subtext">{{moment-from-now model.createdAt}}</span>
+      </div>
+  </div>
   <p>
     {{model.content}}
   </p>
