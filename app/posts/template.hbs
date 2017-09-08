@@ -19,12 +19,13 @@
   {{#mdl-list classNames="post-list" as |list|}}
     {{#each model as |post|}}
       {{#list.item classNames="post-item mdl-shadow--2dp"
+                   isActive=(eq post.slug drawer.slug)
                    lines=3
       }}
         {{#list.content}}
-          {{#link-to 'posts.details' post.slug classNames="post-item__title mdl-typography--headline"}}
+          <div class="post-item__title mdl-typography--headline user-clickable" {{action "showPost" post.slug}}>
             {{trunc-string post.title 40}}
-          {{/link-to}}
+          </div>
 
           {{#list.content type="text-body"
                           classNames="post-item__body"

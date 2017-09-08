@@ -8,6 +8,15 @@ const {
 const DrawerService = Service.extend({
 
   isActive: false,
+  slug: '',
+
+  setSlug(slug) {
+    set(this, 'slug', slug);
+  },
+
+  clearSlug() {
+    set(this, 'slug', '');
+  },
 
   toggleDrawer() {
     this.toggleProperty('isActive');
