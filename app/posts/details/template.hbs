@@ -1,4 +1,4 @@
-{{#if isEditing}}
+{{#liquid-if isEditing class="rotate"}}
 
   {{post-details post=model}}
 
@@ -17,7 +17,7 @@
   <p>
     {{model.content}}
   </p>
-{{/if}}
+{{/liquid-if}}
 
 
 <div class="post-actions">

@@ -21,4 +21,11 @@ export default function(){
     this.reverse('toLeft')
   );
 
+  this.transition(
+    this.hasClass('rotate'),
+    this.toValue(true),
+    this.use('crossFade'),
+    this.reverse('crossFade')
+  );
+
 }
