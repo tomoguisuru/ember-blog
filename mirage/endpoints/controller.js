@@ -40,10 +40,10 @@ class MirageResponseController {
         rels[k] = schema[pluralize(k)].find(relationships[k].data.id);
       });
 
-      return schema[this.modelName].create(singularize(type), assign({}, attributes, rels));
+      return schema.create(singularize(type), assign({}, attributes, rels));
     }
 
-    return schema[this.modelName].create(singularize(type), attributes);
+    return schema.create(singularize(type), attributes);
   }
 
   deleteRequest(schema, request) {
@@ -56,11 +56,13 @@ class MirageResponseController {
   }
 
   patchRequest(schema, request) {
-    log(request);
+    const attrs = JSON.parse(request.requestBody);
+    log(attrs);
     const id = request.params.id;
-    const attrs = this.normalizedRequestAttrs();
 
-    return schema[this.modelName].find(id).update(attrs);
+    const { attributes } = attrs.data;
+
+    return schema[this.modelName].find(id).update(attributes);
   }
 
 }
