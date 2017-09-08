@@ -1,7 +1,6 @@
-# ember-blog
+# El Guapo's Beautiful Blog
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Bringing the beauty of many posts to the people of the world
 
 ## Prerequisites
 
@@ -10,22 +9,19 @@ You will need the following things properly installed on your computer.
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with NPM)
 * [Ember CLI](https://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+* [Chrome](https://www.google.com/chrome/browser/desktop/index.html)
+* [Yarn](https://yarnpkg.com/en/)
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone git@github.com:tomoguisuru/ember-blog.git` this repository
 * `cd ember-blog`
-* `npm install`
+* `yarn prep`
 
 ## Running / Development
 
-* `ember serve`
+* `ember s` or `yarn serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
 
 ### Running Tests
 
@@ -36,15 +32,3 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 * `ember build` (development)
 * `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)

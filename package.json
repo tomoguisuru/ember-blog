@@ -11,6 +11,7 @@
   "repository": "git@github.com:tomoguisuru/ember-blog.git",
   "scripts": {
     "build": "ember build",
+    "build:production": "ember build --environment production",
     "start": "ember server",
     "serve": "ember s --live-reload=false",
     "reset": "yarn unlink && rm -rf node_modules bower_components dist tmp yarn.lock",
