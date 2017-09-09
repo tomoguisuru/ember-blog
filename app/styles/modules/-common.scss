@@ -1,0 +1,45 @@
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+
+  &.isActive {
+    display: inherit;
+  }
+}
+
+
+.flex {
+  display: flex;
+
+  &--column {
+    flex-direction: column;
+  }
+
+  &--1 {
+    flex: 1;
+  }
+}
+
+.items-aligned {
+  &--center {
+    align-items: center;
+  }
+}
+
+.text-aligned {
+  &--center {
+    text-align: center;
+  }
+}
+
+.user-clickable {
+  cursor: pointer;
+}

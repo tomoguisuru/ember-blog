@@ -17,7 +17,7 @@
   </div>
 
   {{#mdl-list classNames="post-list" as |list|}}
-    {{#each model as |post|}}
+    {{#each (sort-by "updatedAt:desc" model) as |post|}}
       {{#list.item classNames="post-item mdl-shadow--2dp"
                    isActive=(eq post.slug drawer.slug)
                    lines=3

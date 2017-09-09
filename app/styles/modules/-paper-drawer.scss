@@ -41,6 +41,15 @@ $break-large: 800px;
     padding: 5px;
   }
 
+  .mdl-list {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  &:hover {
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.25);
+  }
+
   @media screen and (max-width: $break-large) {
     width: 0px;
 
@@ -56,9 +65,7 @@ $break-large: 800px;
       }
     }
   }
-  //@media screen and (min-width: $break-large) {
-  //
-  //}
 
-  transition: width 0.5s;
+
+  transition: all 250ms linear;
 }

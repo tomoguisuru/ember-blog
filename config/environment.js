@@ -47,5 +47,11 @@ module.exports = function(environment) {
 
   }
 
+  ENV['ember-toastr'] = {
+    toastrOptions: {
+      positionClass: 'toast-bottom-right',
+    }
+  };
+
   return ENV;
 };

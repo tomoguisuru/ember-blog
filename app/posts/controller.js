@@ -24,7 +24,6 @@ const PostsController = Controller.extend({
     },
 
     showPost(slug) {
-      get(this, 'drawer').setSlug(slug);
       this.transitionToRoute('posts.details', slug);
     }
   }
